@@ -31,6 +31,11 @@ def index(request):
     return build_response(body=body)
 
 def delete(note_id):
+    nota = get_note(int(note_id))
+    body = load_template('confirm-delete.html').format(id=nota.id, title=nota.title, details=nota.content)
+    return build_response(body=body)
+
+def confirm_delete(note_id):
     delete_note(int(note_id))
     return build_response(code=303, reason='See Other', headers='Location: /')
 
