@@ -255,3 +255,11 @@ textarea.autoresize{
   max-width: 280px;
   margin: 0 auto;
 }
+
+.form-error {
+  margin: 0;
+  padding: 10px 16px 0 16px;
+  color: #c0392b;
+  font-size: 13px;
+  font-weight: bold;
+}

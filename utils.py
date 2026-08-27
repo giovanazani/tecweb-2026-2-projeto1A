@@ -15,13 +15,6 @@ def read_file(filepath):
     arquivo.close()
     return conteudo
 
-def load_data(filepath):
-    caminho = "data/" + filepath
-    arquivo = open(caminho, 'r')
-    dados = json.load(arquivo)
-    arquivo.close() #liberar o arquivo depois de usá-lo
-    return dados
-
 def load_template(arquivo):
     arq = open('templates/'+ arquivo, 'r', encoding='utf-8')
     conteudo = arq.read()
