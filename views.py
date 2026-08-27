@@ -1,5 +1,5 @@
 from urllib.parse import unquote_plus
-from utils import get_notes, get_note, update_note, load_template, build_response, add_note, delete_note
+from utils import get_notes, get_note, update_note, load_template, build_response, add_note, delete_note, toggle_favorite
 
 def index(request):
     if request.startswith('POST'):
@@ -22,7 +22,9 @@ def index(request):
 
     note_template = load_template('components/note.html')
     notes_li = [
-        note_template.format(title=nota.title, details=nota.content, id=nota.id)
+        note_template.format(
+            title=nota.title, details=nota.content, id=nota.id,
+            favorite_label = 'Favorita' if nota.favorite else 'Favoritar')
         for nota in get_notes()
     ]
     notes = '\n'.join(notes_li)
@@ -55,3 +57,11 @@ def edit(request, note_id):
     nota = get_note(int(note_id))
     body = load_template('edit.html').format(id=nota.id, title=nota.title, details=nota.content)
     return build_response(body=body)
+
+def favorite(note_id):
+    toggle_favorite(int(note_id))
+    return build_response(code=303, reason='See Other', headers='Location: /')
+
+def not_found():
+    body = load_template('404.html')
+    return build_response(body=body, code=404, reason='Not Found')

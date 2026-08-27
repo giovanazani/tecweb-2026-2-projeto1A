@@ -229,3 +229,29 @@ textarea.autoresize{
 .card-action:hover {
   text-decoration: underline;
 }
+
+.not-found{
+  text-align: center;
+  padding: 40px 0;
+}
+
+.not-found svg {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.not-found h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.not-found p {
+  margin-bottom: 24px;
+  color: #4c4c4c;
+}
+
+.not-found .btn {
+  max-width: 280px;
+  margin: 0 auto;
+}

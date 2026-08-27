@@ -46,6 +46,9 @@ def update_note(note_id, titulo, detalhes):
     nota = Note(id=note_id, title=titulo, content=detalhes)
     db.update(nota)
 
+def toggle_favorite(note_id):
+    db.toggle_favorite(note_id)
+
 def build_response(body='', code=200, reason='OK', headers=''):
     if isinstance(body, str):
         body = body.encode()
