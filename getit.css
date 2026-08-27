@@ -1,0 +1,230 @@
+/*
+Algumas informações úteis e dicas:
+  - Fontes disponíveis:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+  - Cores:
+    Tons de amarelo:
+      #e4fc2b
+      #e0d426
+      #f7d736
+      #e0af26
+      #fcb02b
+    Tons de cinza:
+      #2c2c2c
+      #4c4c4c
+    Cores dos cards:
+      #ead3a7
+      #9de0f5
+      #ef89ba
+      #fae890
+      #abe9c1
+  - Sombra: https://codepen.io/sdthornton/pen/wBZdXq
+ */
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: #2c2c2c;
+}
+
+.appbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #f7d736;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #4c4c4c;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+}
+
+.form-card{
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto 60px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-card-title {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px 16px 10px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+textarea.autoresize{
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  min-height: 60px;
+  padding: 10px 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #2c2c2c;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+  background-color: #f7d736;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.btn-cancel {
+  text-align: center;
+  text-decoration: none;
+}
+
+.form-card-actions {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px 16px 16px;
+}
+
+.form-card-actions .btn {
+  width: auto;
+  flex: 1;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  min-height: 130px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #2c2c2c;
+  font-family: "Permanent Marker", cursive;
+}
+
+.card-title{
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card-color-1 {
+  background-color: #ead3a7;
+}
+ 
+.card-color-2 {
+  background-color: #9de0f5;
+}
+ 
+.card-color-3 {
+  background-color: #ef89ba;
+}
+ 
+.card-color-4 {
+  background-color: #fae890;
+}
+ 
+.card-color-5 {
+  background-color: #abe9c1;
+}
+ 
+/* ---------- Rotação dos cartões (definida pelo getit.js) ---------- */
+.card-rotation-1 {
+  transform: rotate(-10deg);
+}
+ 
+.card-rotation-2 {
+  transform: rotate(-8deg);
+}
+ 
+.card-rotation-3 {
+  transform: rotate(-6deg);
+}
+ 
+.card-rotation-4 {
+  transform: rotate(-4deg);
+}
+ 
+.card-rotation-5 {
+  transform: rotate(-2deg);
+}
+ 
+.card-rotation-6 {
+  transform: rotate(0deg);
+}
+ 
+.card-rotation-7 {
+  transform: rotate(2deg);
+}
+ 
+.card-rotation-8 {
+  transform: rotate(4deg);
+}
+ 
+.card-rotation-9 {
+  transform: rotate(6deg);
+}
+ 
+.card-rotation-10 {
+  transform: rotate(8deg);
+}
+ 
+.card-rotation-11 {
+  transform: rotate(10deg);
+}
+
+.card-action{
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-action:hover {
+  text-decoration: underline;
+}
